@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Aspirantes - ISVI</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+    header { background: #ffffff; padding: 10px 20px; display: flex; align-items: center; border-bottom: 2px solid #ccc; justify-content: center; /* Centra el logo horizontalmente */ }
+    header img { height: 200px; /* Logo el doble de grande */
+                 width: auto; /* Mantiene la proporción de la imagen */
+                 max-width: 100%; /* Asegura que no se desborde en pantallas pequeñas */
+                 display: block; /* Elimina espacio extra debajo de la imagen */
+                 margin: 0 auto; /* Centra la imagen si el header es más ancho */ }
+    main { max-width: 700px; margin: 30px auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+    h2 { text-align: center; margin-bottom: 20px; color: #004d40; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input[type="text"], input[type="date"], input[type="email"] { /* Estilos para inputs de texto, fecha, email */
+      width: 100%; padding: 8px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box;
+    }
+    button { margin-top: 20px; width: 100%; padding: 10px; border: none; border-radius: 5px; background: #004d40; color: #fff; font-size: 16px; cursor: pointer; }
+    button:hover { background: #00695c; }
+    .mensaje { margin-top: 15px; font-weight: bold; text-align: center; }
+    .subtitulo { margin-top: 30px; font-size: 1.1em; color: #004d40; border-top: 1px solid #ccc; padding-top: 15px; }
+    .welcome-message {
+      text-align: center;
+      font-size: 1.3em;
+      color: #004d40;
+      margin: 20px 0 10px 0; /* Ajuste de margen inferior */
+      padding: 10px;
+      background-color: #e0f2f1; /* Un color de fondo suave para el mensaje */
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .data-consent-message {
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      margin: 10px 0 20px 0; /* Margen superior e inferior */
+      padding: 8px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      border: 1px dashed #ccc;
+    }
+    .data-consent-message input[type="radio"] { /* Estilos específicos para los radio buttons */
+      width: auto; /* Para que no ocupen todo el ancho */
+      margin: 0 5px;
+    }
+    .data-consent-message label {
+      display: inline-block; /* Para que las etiquetas estén junto a los radios */
+      margin-top: 0;
+      font-weight: normal;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="LOGO-ISVI-VIEJO-AJUSTADO-2024-01.png" alt="ISVI Logo">
+</header>
+
+<main>
+  <div class="welcome-message">
+    Sr@s Aspirantes bienvenido a la familia Isvi ltda
+  </div>
+  <div class="data-consent-message">
+    Acepto el tratamiento de mis datos:
+    <input type="radio" id="aceptaSi" name="acepta_datos" value="Sí" required checked>
+    <label for="aceptaSi">Sí</label>
+    <input type="radio" id="aceptaNo" name="acepta_datos" value="No">
+    <label for="aceptaNo">No</label>
+  </div>
+  <h2>Formulario de Registro de Aspirantes</h2>
+  <form id="registroForm">
+    <label>Cédula:</label>
+    <input type="text" name="cedula" required>
+
+    <label>Apellidos y Nombres:</label>
+    <input type="text" name="apellidos_nombres" required>
+
+    <label>Fecha de Nacimiento:</label>
+    <input type="date" name="fecha_nacimiento" required>
+
+    <label>Teléfono Fijo:</label>
+    <input type="text" name="telefono_fijo">
+
+    <label>Género:</label>
+    <input type="text" name="genero">
+
+    <label>Dirección - Barrio:</label>
+    <input type="text" name="direccion">
+
+    <label>Correo Electrónico:</label>
+    <input type="email" name="correo" required>
+
+    <label>RH:</label>
+    <input type="text" name="rh">
+
+    <label>Lugar de Nacimiento:</label>
+    <input type="text" name="lugar_nacimiento">
+
+    <label>Celular:</label>
+    <input type="text" name="celular">
+
+    <label>Ciudad:</label>
+    <input type="text" name="ciudad">
+
+    <label>Cargo:</label>
+    <input type="text" name="cargo">
+
+    <label>EPS:</label>
+    <input type="text" name="eps">
+
+    <label>Caja de Compensación:</label>
+    <input type="text" name="caja_compensacion">
+
+    <label>Pensión:</label>
+    <input type="text" name="pension">
+
+    <label>Cesantías:</label>
+    <input type="text" name="cesantias">
+
+    <label>Banco:</label>
+    <input type="text" name="banco">
+
+    <label>Nro. Cuenta Bancaria:</label>
+    <input type="text" name="cuenta_bancaria">
+
+    <label>Sucursal:</label>
+    <input type="text" name="sucursal">
+
+    <label>Municipio/Proyecto:</label>
+    <input type="text" name="municipio">
+
+    <div class="subtitulo">En caso de ser seleccionado</div>
+
+    <label>Talla de Overol:</label>
+    <input type="text" name="talla_overol">
+
+    <label>Talla de Camiseta:</label>
+    <input type="text" name="talla_camiseta">
+
+    <label>Talla de Pantalón:</label>
+    <input type="text" name="talla_pantalon">
+
+    <label>Talla de Chaqueta:</label>
+    <input type="text" name="talla_chaqueta">
+
+    <label>N° de Calzado:</label>
+    <input type="text" name="calzado">
+
+    <button type="submit">Registrar</button>
+  </form>
+  <div class="mensaje" id="mensaje"></div>
+</main>
+
+<script>
+document.getElementById('registroForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const cedula = form.cedula.value.trim();
+  const nombres = form.apellidos_nombres.value.trim();
+  const aceptaDatos = form.acepta_datos.value; // Obtiene el valor del radio button seleccionado
+
+  if (!cedula) {
+    document.getElementById('mensaje').textContent = "⚠️ El campo Cédula es obligatorio.";
+    return;
+  }
+  if (!nombres) {
+    document.getElementById('mensaje').textContent = "⚠️ El campo Apellidos y Nombres es obligatorio.";
+    return;
+  }
+  if (aceptaDatos !== 'Sí') { // Verifica si la opción "Sí" no está seleccionada
+    document.getElementById('mensaje').textContent = "⚠️ Debe aceptar el tratamiento de datos para continuar.";
+    return;
+  }
+
+  const formData = new FormData(form);
+  const data = new URLSearchParams();
+  for (const [key, value] of formData.entries()) {
+    data.append(key, value);
+  }
+
+  // Asegúrate de que esta URL sea la de tu despliegue de Google Apps Script
+  const scriptURL = 'https://script.google.com/macros/s/AKfycby_TQ4Iadm9z8xk7XiniaCSUjfjKR7Q6_X92EzpxYGcIp0RpqwTLnGEf3IfyuGoKRGgEA/exec';
+  fetch(scriptURL, { method: 'POST', body: data })
+    .then(response => response.text())
+    .then(result => {
+      document.getElementById('mensaje').textContent = result;
+      form.reset();
+    })
+    .catch(error => {
+      document.getElementById('mensaje').textContent = '❌ Error al enviar registro: ' + error.message;
+    });
+});
+</script>
+
+</body>
+</html>
